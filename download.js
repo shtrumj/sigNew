@@ -66,7 +66,7 @@ async function download(){
       // Write the data to a file
       const filePath = path.join(__dirname, "iocs.csv");
       fs.writeFileSync(filePath, csvData);
-      res.download(filePath);
+      // res.download(filePath);
     })
     .catch((error) => {
         console.error(error);
@@ -74,3 +74,4 @@ async function download(){
       });
   };
   download()
+module.exports = { download};
